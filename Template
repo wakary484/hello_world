@@ -1,0 +1,12 @@
+import pandas as pd
+df = pd.read_excel("Classeur2.xlsx","Feuil1")
+fly = df['Fy'].values.tolist()
+print(fly)
+
+def plus10(num):
+    return num+100
+
+df['TEST 1'] = df['Fy'].apply(plus10)
+fly2 = df['TEST 1'].values.tolist()
+print(fly2)
+print(df)
